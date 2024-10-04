@@ -22,7 +22,7 @@ cd cao_jiale_ui_garden
 ### Step 3: Run the Docker Container
 
   ```bash
-  docker run -d -p 8083:80 --name cao_jiale_coding_assignment12 cao_jiale_coding_assignment12
+  docker run -d -p 8083:8083 --name cao_jiale_coding_assignment12 cao_jiale_coding_assignment12
   ```
 
 ### Step 4: Access the Application

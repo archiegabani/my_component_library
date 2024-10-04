@@ -2,7 +2,7 @@
 FROM node:18-alpine AS build
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /cao_jiale_ui_garden
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -17,13 +17,19 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve the application
-FROM nginx:alpine
+FROM node:18-alpine
+
+# Install 'serve' globally
+RUN npm install -g serve
+
+# Set the working directory
+WORKDIR /cao_jiale_ui_garden
 
 # Copy the build files from the previous stage
-COPY --from=build /usr/src/app/build /usr/share/nginx/html
+COPY --from=build /cao_jiale_ui_garden/dist ./dist
 
 # Expose port 8083
 EXPOSE 8083
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Use 'serve' to serve the application
+CMD ["serve", "-s", "dist", "-l", "8083"]
