@@ -1,8 +1,0 @@
-import{j as a}from"./jsx-runtime-CkxqCPlQ.js";import{d as u}from"./styled-components.browser.esm-CW2lnlac.js";import"./index-DJO9vBfz.js";const x=u.label`
-  display: flex;
-  align-items: center;
-  cursor: ${e=>e.isDisabled?"not-allowed":"pointer"};
-  color: ${e=>e.isDisabled?"#ccc":"#000"};
-`,y=u.input`
-  margin-right: 8px;
-`,o=({label:e,value:g,isDisabled:s,name:b})=>a.jsxs(x,{isDisabled:s,children:[a.jsx(y,{type:"radio",value:g,name:b,disabled:s}),e]});o.__docgenInfo={description:"",methods:[],displayName:"RadioButton",props:{options:{required:!0,tsType:{name:"Array",elements:[{name:"string"}],raw:"string[]"},description:""},selected:{required:!0,tsType:{name:"string"},description:""},onSelect:{required:!0,tsType:{name:"signature",type:"function",raw:"(value: string) => void",signature:{arguments:[{type:{name:"string"},name:"value"}],return:{name:"void"}}},description:""}}};const v={title:"Components/RadioButton",component:o,argTypes:{label:{control:"text"},value:{control:"text"},isDisabled:{control:"boolean"}}},m=e=>a.jsx(o,{...e}),t=m.bind({});t.args={label:"Option 1",value:"1",isDisabled:!1,name:"radio-group"};const r=m.bind({});r.args={label:"Option 1",value:"1",isDisabled:!0,name:"radio-group"};var n,i,d;t.parameters={...t.parameters,docs:{...(n=t.parameters)==null?void 0:n.docs,source:{originalSource:"args => <RadioButton {...args} />",...(d=(i=t.parameters)==null?void 0:i.docs)==null?void 0:d.source}}};var l,p,c;r.parameters={...r.parameters,docs:{...(l=r.parameters)==null?void 0:l.docs,source:{originalSource:"args => <RadioButton {...args} />",...(c=(p=r.parameters)==null?void 0:p.docs)==null?void 0:c.source}}};const B=["Default","Disabled"];export{t as Default,r as Disabled,B as __namedExportsOrder,v as default};
