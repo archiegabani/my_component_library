@@ -6,7 +6,7 @@
 Open a terminal and clone the repository:
 
 ```bash
-git clone https://github.com:CJ20170805/React-UI-Garden.git
+git clone https://github.com/CJ20170805/React-UI-Garden.git
 cd cao_jiale_ui_garden
 ```
 
