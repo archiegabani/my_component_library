@@ -12,7 +12,9 @@ const StyledText = styled.p<{ isdisabled?: string }>`
 `;
 
 const Text: React.FC<TextProps> = ({ content, isdisabled = false }) => {
-  return <StyledText isdisabled={isdisabled ? 'true' : ''}>{content}</StyledText>;
+  return (
+    <StyledText isdisabled={isdisabled ? "true" : ""}>{content}</StyledText>
+  );
 };
 
 export default Text;

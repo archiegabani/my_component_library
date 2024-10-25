@@ -20,7 +20,7 @@ const Img: React.FC<ImgProps> = ({ src, alt, width, height, isdisabled }) => {
       alt={alt}
       width={width}
       height={height}
-      isdisabled={isdisabled ? 'true' : ''}
+      isdisabled={isdisabled ? "true" : ""}
     />
   );
 };

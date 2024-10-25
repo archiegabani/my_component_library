@@ -19,7 +19,7 @@ const StyledButton = styled.button<{ isdisabled?: string }>`
 const Button: React.FC<ButtonProps> = ({ label, isdisabled, onClick }) => {
   return (
     <StyledButton
-      isdisabled={isdisabled ? 'true' : ''}
+      isdisabled={isdisabled ? "true" : ""}
       onClick={isdisabled ? undefined : onClick}
       disabled={isdisabled}
     >

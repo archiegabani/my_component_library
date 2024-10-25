@@ -19,7 +19,7 @@ const Title = styled.h3`
 
 const Card: React.FC<CardProps> = ({ title, content, isdisabled }) => {
   return (
-    <StyledCard isdisabled={isdisabled ? 'true' : ''}>
+    <StyledCard isdisabled={isdisabled ? "true" : ""}>
       <Title>{title}</Title>
       <p>{content}</p>
     </StyledCard>

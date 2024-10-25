@@ -20,7 +20,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
   name,
 }) => {
   return (
-    <StyledLabel isdisabled={isdisabled ? 'true' : ''}>
+    <StyledLabel isdisabled={isdisabled ? "true" : ""}>
       <RadioInput
         type="radio"
         value={value}

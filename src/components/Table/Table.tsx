@@ -33,7 +33,7 @@ const Table: React.FC<TableProps> = ({ headers, data, isdisabled }) => {
         {data.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {headers.map((header, cellIndex) => (
-              <StyledTd key={cellIndex} isdisabled={isdisabled ? 'true' : ''}>
+              <StyledTd key={cellIndex} isdisabled={isdisabled ? "true" : ""}>
                 {row[header as keyof typeof row]} {/* Ensure correct mapping */}
               </StyledTd>
             ))}

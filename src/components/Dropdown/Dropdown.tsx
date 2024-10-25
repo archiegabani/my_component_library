@@ -19,7 +19,7 @@ const StyledSelect = styled.select<{ isdisabled?: string }>`
 
 const Dropdown: React.FC<DropdownProps> = ({ options, isdisabled }) => {
   return (
-    <StyledSelect disabled={isdisabled} isdisabled={isdisabled ? 'true' : ''}>
+    <StyledSelect disabled={isdisabled} isdisabled={isdisabled ? "true" : ""}>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}

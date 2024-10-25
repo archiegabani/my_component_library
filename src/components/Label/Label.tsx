@@ -10,7 +10,9 @@ const StyledLabel = styled.label<{ isdisabled?: string }>`
 `;
 
 const Label: React.FC<LabelProps> = ({ text, isdisabled }) => {
-  return <StyledLabel isdisabled={isdisabled ? 'true' : ''}>{text}</StyledLabel>;
+  return (
+    <StyledLabel isdisabled={isdisabled ? "true" : ""}>{text}</StyledLabel>
+  );
 };
 
 export default Label;

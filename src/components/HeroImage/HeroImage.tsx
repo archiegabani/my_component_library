@@ -17,7 +17,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ imageurl, isdisabled }) => {
     <StyledHeroImage
       data-testid="hero-image"
       imageurl={imageurl}
-      isdisabled={isdisabled ? 'true' : ''}
+      isdisabled={isdisabled ? "true" : ""}
     />
   );
 };
