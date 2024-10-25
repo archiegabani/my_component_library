@@ -18,6 +18,6 @@ WORKDIR /cao_jiale_ui_garden
 
 COPY --from=build /cao_jiale_ui_garden/dist ./dist
 
-EXPOSE 8083
+EXPOSE 8018
 
-CMD ["serve", "-s", "dist", "-l", "8083"]
+CMD ["serve", "-s", "dist", "-l", "8018"]
