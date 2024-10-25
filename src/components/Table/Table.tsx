@@ -1,6 +1,6 @@
-import React from 'react';
-import { TableProps } from './Table.types';
-import styled from 'styled-components';
+import React from "react";
+import { TableProps } from "./Table.types";
+import styled from "styled-components";
 
 const StyledTable = styled.table`
   width: 100%;
@@ -13,13 +13,13 @@ const StyledTh = styled.th`
   border: 1px solid #ccc;
 `;
 
-const StyledTd = styled.td<{ isDisabled?: boolean }>`
+const StyledTd = styled.td<{ isdisabled?: string }>`
   padding: 8px;
   border: 1px solid #ccc;
-  color: ${(props) => (props.isDisabled ? '#ccc' : '#000')};
+  color: ${(props) => (props.isdisabled ? "#ccc" : "#000")};
 `;
 
-const Table: React.FC<TableProps> = ({ headers, data, isDisabled }) => {
+const Table: React.FC<TableProps> = ({ headers, data, isdisabled }) => {
   return (
     <StyledTable>
       <thead>
@@ -33,7 +33,7 @@ const Table: React.FC<TableProps> = ({ headers, data, isDisabled }) => {
         {data.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {headers.map((header, cellIndex) => (
-              <StyledTd key={cellIndex} isDisabled={isDisabled}>
+              <StyledTd key={cellIndex} isdisabled={isdisabled ? 'true' : ''}>
                 {row[header as keyof typeof row]} {/* Ensure correct mapping */}
               </StyledTd>
             ))}

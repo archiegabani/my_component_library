@@ -1,19 +1,22 @@
 // Table.test.tsx
-import { render, screen } from '@testing-library/react';
-import Table from './Table';
+import React from "react";
+import "@testing-library/jest-dom";
+import { jest } from "@jest/globals";
+import { render, screen } from "@testing-library/react";
+import Table from "./Table";
 
-describe('Table Component', () => {
-  const headers = ['id', 'name'];
+describe("Table Component", () => {
+  const headers = ["id", "name"];
   const data = [
-    { id: 1, name: 'Row 1' },
-    { id: 2, name: 'Row 2' },
+    { id: 1, name: "Row 1" },
+    { id: 2, name: "Row 2" },
   ];
 
-  test('renders Table component with data', () => {
+  test("renders Table component with data", () => {
     render(<Table headers={headers} data={data} />);
 
     // Check if the table is in the document
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getByRole("table")).toBeInTheDocument();
 
     // Check if headers are rendered
     headers.forEach((header) => {
@@ -26,16 +29,18 @@ describe('Table Component', () => {
     });
   });
 
-  test('renders Table component in disabled state', () => {
-    const { container } = render(<Table headers={headers} data={data} isDisabled />);
+  test("renders Table component in disabled state", () => {
+    const { container } = render(
+      <Table headers={headers} data={data} isdisabled />,
+    );
 
     // Check if the table is in the document
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getByRole("table")).toBeInTheDocument();
 
     // Verify if cells are rendered with disabled styles
-    const cells = container.querySelectorAll('td');
+    const cells = container.querySelectorAll("td");
     cells.forEach((cell) => {
-      expect(cell).toHaveStyle('color: #ccc'); // Assuming this style indicates disabled state
+      expect(cell).toHaveStyle("color: #ccc"); // Assuming this style indicates disabled state
     });
   });
 });

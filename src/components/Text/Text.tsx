@@ -1,18 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface TextProps {
   content: string;
-  isDisabled?: boolean;
+  isdisabled?: boolean;
 }
 
-const StyledText = styled.p<{ isDisabled?: boolean }>`
-  color: ${(props) => (props.isDisabled ? '#ccc' : '#000')};
+const StyledText = styled.p<{ isdisabled?: string }>`
+  color: ${(props) => (props.isdisabled ? "#ccc" : "#000")};
   font-size: 16px;
 `;
 
-const Text: React.FC<TextProps> = ({ content, isDisabled = false }) => {
-  return <StyledText isDisabled={isDisabled}>{content}</StyledText>;
+const Text: React.FC<TextProps> = ({ content, isdisabled = false }) => {
+  return <StyledText isdisabled={isdisabled ? 'true' : ''}>{content}</StyledText>;
 };
 
 export default Text;

@@ -1,32 +1,32 @@
-import { Meta, StoryObj } from '@storybook/react';
-import RadioButton from './RadioButton';
-import { RadioButtonProps } from './RadioButton.types';
+import { Meta, StoryObj } from "@storybook/react";
+import RadioButton from "./RadioButton";
+import { RadioButtonProps } from "./RadioButton.types";
 
 export default {
-    title: 'Components/RadioButton',
-    component: RadioButton,
-    argTypes: {
-        label: { control: 'text' },
-        isDisabled: { control: 'boolean' },
-    },
+  title: "Components/RadioButton",
+  component: RadioButton,
+  argTypes: {
+    label: { control: "text" },
+    isdisabled: { control: "boolean" },
+  },
 } as Meta<RadioButtonProps>;
 
 const Template: StoryObj<RadioButtonProps> = {
-    render: (args) => <RadioButton {...args} />,
+  render: (args) => <RadioButton {...args} />,
 };
 
 export const Default = {
-    ...Template,
-    args: {
-        label: 'Radio Button Label',
-        isDisabled: false,
-    },
+  ...Template,
+  args: {
+    label: "Radio Button Label",
+    isdisabled: false,
+  },
 };
 
 export const Disabled = {
-    ...Template,
-    args: {
-        label: 'Radio Button Label',
-        isDisabled: true,
-    },
+  ...Template,
+  args: {
+    label: "Radio Button Label",
+    isdisabled: true,
+  },
 };

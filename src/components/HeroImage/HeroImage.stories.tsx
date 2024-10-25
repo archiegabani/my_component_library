@@ -1,13 +1,13 @@
-import { Meta, StoryObj } from '@storybook/react';
-import HeroImage from './HeroImage';
-import { HeroImageProps } from './HeroImage.types';
+import { Meta, StoryObj } from "@storybook/react";
+import HeroImage from "./HeroImage";
+import { HeroImageProps } from "./HeroImage.types";
 
 export default {
-  title: 'Components/HeroImage',
+  title: "Components/HeroImage",
   component: HeroImage,
   argTypes: {
-    imageUrl: { control: 'text' },
-    isDisabled: { control: 'boolean' },
+    imageurl: { control: "text" },
+    isdisabled: { control: "boolean" },
   },
 } as Meta<HeroImageProps>;
 
@@ -18,15 +18,15 @@ const Template: StoryObj<HeroImageProps> = {
 export const Default = {
   ...Template,
   args: {
-    imageUrl: 'https://picsum.photos/seed/picsum/800/500', // Placeholder image
-    isDisabled: false,
+    imageurl: "https://picsum.photos/seed/picsum/800/500", // Placeholder image
+    isdisabled: false,
   },
 };
 
 export const Disabled = {
   ...Template,
   args: {
-    imageUrl: 'https://picsum.photos/seed/picsum/800/500', // Placeholder image
-    isDisabled: true,
+    imageurl: "https://picsum.photos/seed/picsum/800/500", // Placeholder image
+    isdisabled: true,
   },
 };

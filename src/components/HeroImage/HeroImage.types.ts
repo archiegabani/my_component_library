@@ -1,4 +1,4 @@
 export interface HeroImageProps {
-    imageUrl: string;      
-    isDisabled?: boolean;    
-  }
+  imageurl: string;
+  isdisabled?: boolean;
+}

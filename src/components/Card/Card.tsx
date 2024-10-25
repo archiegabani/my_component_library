@@ -1,15 +1,15 @@
-import React from 'react';
-import { CardProps } from './Card.types';
-import styled from 'styled-components';
+import React from "react";
+import { CardProps } from "./Card.types";
+import styled from "styled-components";
 
-const StyledCard = styled.div<{ isDisabled?: boolean }>`
+const StyledCard = styled.div<{ isdisabled?: string }>`
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   max-width: 300px;
   text-align: center;
-  filter: ${(props) => (props.isDisabled ? 'grayscale(100%)' : 'none')};
-  cursor: ${(props) => (props.isDisabled ? 'not-allowed' : 'pointer')};
+  filter: ${(props) => (props.isdisabled ? "grayscale(100%)" : "none")};
+  cursor: ${(props) => (props.isdisabled ? "not-allowed" : "pointer")};
 `;
 
 const Title = styled.h3`
@@ -17,9 +17,9 @@ const Title = styled.h3`
   font-size: 1.25rem;
 `;
 
-const Card: React.FC<CardProps> = ({ title, content, isDisabled }) => {
+const Card: React.FC<CardProps> = ({ title, content, isdisabled }) => {
   return (
-    <StyledCard isDisabled={isDisabled}>
+    <StyledCard isdisabled={isdisabled ? 'true' : ''}>
       <Title>{title}</Title>
       <p>{content}</p>
     </StyledCard>

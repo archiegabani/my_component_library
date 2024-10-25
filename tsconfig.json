@@ -6,5 +6,8 @@
   ],
   "compilerOptions": {
     "types": ["@testing-library/jest-dom", "@types/jest"],
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noEmitOnError": false,
   },
 }

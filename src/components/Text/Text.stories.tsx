@@ -1,31 +1,31 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Text from './Text';
+import { Meta, StoryObj } from "@storybook/react";
+import Text from "./Text";
 
 export default {
-  title: 'Components/Text',
+  title: "Components/Text",
   component: Text,
   argTypes: {
-    content: { control: 'text' },
-    isDisabled: { control: 'boolean' },
+    content: { control: "text" },
+    isdisabled: { control: "boolean" },
   },
 } as Meta;
 
 const Template: StoryObj = {
-  render: (args) => <Text content={''} {...args} />,
+  render: (args) => <Text content={""} {...args} />,
 };
 
 export const Default = {
   ...Template,
   args: {
-    content: 'This is some sample text.',
-    isDisabled: false,
+    content: "This is some sample text.",
+    isdisabled: false,
   },
 };
 
 export const Disabled = {
   ...Template,
   args: {
-    content: 'This text is disabled.',
-    isDisabled: true,
+    content: "This text is disabled.",
+    isdisabled: true,
   },
 };

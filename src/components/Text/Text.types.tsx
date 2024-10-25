@@ -1,4 +1,4 @@
 export interface TextProps {
-    content: string;
-    isDisabled?: boolean;
+  content: string;
+  isdisabled?: boolean;
 }

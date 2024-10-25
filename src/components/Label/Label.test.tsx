@@ -1,13 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import Label from './Label';
+import React from "react";
+import "@testing-library/jest-dom";
+import { jest } from "@jest/globals";
+import { render, screen } from "@testing-library/react";
+import Label from "./Label";
 
-test('renders Label component', () => {
+test("renders Label component", () => {
   render(<Label text="Test Label" />);
   expect(screen.getByText(/test label/i)).toBeInTheDocument();
 });
 
-test('renders Label in disabled state', () => {
-  const { container } = render(<Label text="Test Label" isDisabled />);
-  expect(container.firstChild).toHaveStyle('color: #ccc');
-  expect(container.firstChild).toHaveStyle('cursor: not-allowed');
+test("renders Label in disabled state", () => {
+  const { container } = render(<Label text="Test Label" isdisabled />);
+  expect(container.firstChild).toHaveStyle("color: #ccc");
+  expect(container.firstChild).toHaveStyle("cursor: not-allowed");
 });

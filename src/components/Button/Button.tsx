@@ -1,24 +1,28 @@
-import React from 'react';
-import { ButtonProps } from './Button.types';
-import styled from 'styled-components';
+import React from "react";
+import { ButtonProps } from "./Button.types";
+import styled from "styled-components";
 
-const StyledButton = styled.button<{ isDisabled?: boolean }>`
+const StyledButton = styled.button<{ isdisabled?: string }>`
   padding: 10px 20px;
-  background-color: ${(props) => (props.isDisabled ? '#ccc' : '#007bff')};
-  color: ${(props) => (props.isDisabled ? '#666' : '#fff')};
+  background-color: ${(props) => (props.isdisabled ? "#ccc" : "#007bff")};
+  color: ${(props) => (props.isdisabled ? "#666" : "#fff")};
   border: none;
   border-radius: 4px;
-  cursor: ${(props) => (props.isDisabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props) => (props.isdisabled ? "not-allowed" : "pointer")};
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${(props) => (props.isDisabled ? '#ccc' : '#0056b3')};
+    background-color: ${(props) => (props.isdisabled ? "#ccc" : "#0056b3")};
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({ label, isDisabled, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, isdisabled, onClick }) => {
   return (
-    <StyledButton isDisabled={isDisabled} onClick={isDisabled ? undefined : onClick}>
+    <StyledButton
+      isdisabled={isdisabled ? 'true' : ''}
+      onClick={isdisabled ? undefined : onClick}
+      disabled={isdisabled}
+    >
       {label}
     </StyledButton>
   );
