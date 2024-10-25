@@ -10,6 +10,11 @@ COPY . .
 
 RUN npm run build
 
+# Run linting and tests
+RUN npm run lint
+RUN npm run prettier:check
+RUN npm test
+
 FROM node:18-alpine
 
 RUN npm install -g serve

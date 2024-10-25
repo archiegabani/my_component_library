@@ -16,16 +16,16 @@ cd cao_jiale_ui_garden
 2. Build the Docker image using the following command:
 
    ```bash
-   docker build -t cao_jiale_coding_assignment12 .
+   docker build -t cao_jiale_coding_assignment13 .
    ```
 
 ### Step 3: Run the Docker Container
 
   ```bash
-  docker run -d -p 8083:8083 --name cao_jiale_coding_assignment12 cao_jiale_coding_assignment12
+  docker run -d -p 8018:8018 --name cao_jiale_coding_assignment13 cao_jiale_coding_assignment13
   ```
 
 ### Step 4: Access the Application
   ```bash
-  http://localhost:8083
+  http://localhost:8018
   ```
