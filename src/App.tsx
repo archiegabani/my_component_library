@@ -27,7 +27,7 @@ function App() {
           ]}
         />
         <br />
-        <Card title="Card Title" content="This is a sample card content." />
+        <Card title="Card Titlee" content="This is a sample card content." />
         <RadioButton label="Radio Option" value="1" name="radio-group" />
         <Text content="Sample Text" />
         <Label text="Sample Label" />
