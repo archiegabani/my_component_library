@@ -1,6 +1,6 @@
 FROM node:18-alpine AS build
 
-WORKDIR /cao_jiale_ui_garden
+WORKDIR /gabani_archie_ui_garden
 
 COPY package*.json ./
 
@@ -19,9 +19,9 @@ FROM node:18-alpine
 
 RUN npm install -g serve
 
-WORKDIR /cao_jiale_ui_garden
+WORKDIR /gabani_archie_ui_garden
 
-COPY --from=build /cao_jiale_ui_garden/dist ./dist
+COPY --from=build /gabani_archie_ui_garden/dist ./dist
 
 EXPOSE 8018
 
