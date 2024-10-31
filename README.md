@@ -6,7 +6,7 @@
 Open a terminal and clone the repository:
 
 ```bash
-git clone git@github.com:archiegabani/my_component_library.git
+git clone https://github.com/archiegabani/my_component_library.git
 cd gabani_archie_ui_garden
 ```
 
